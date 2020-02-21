@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 import math
-def masa_resorte( X , t ):
+def resorte( X , t ):
     m1 = 6 #Masa del cuerpo 1
     m2 = 4 #Masa del cuerpo 2
     lo = 10 #Elongación del resorte
@@ -24,7 +24,7 @@ def masa_resorte( X , t ):
     
     return [dx1dt, dvx1dt, dx2dt, dvx2dt]#Retorno las variables calculadas
 t = np.linspace(0,13,500)#Tiempo
-y = odeint(masa_resorte, [0,0,10,0], t)#Recibe la función y los valores de esta.
+y = odeint(resorte, [0,0,10,0], t)#Recibe la función y los valores de esta.
 #Datos en la gráfica.
 plt.plot(t,y[:,0])
 plt.plot(t,y[:,2])
