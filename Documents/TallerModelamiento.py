@@ -1,3 +1,4 @@
+#Juan Ochoa 000340107 Modelamiento Matemático.
 import numpy as np
 
 import matplotlib.pyplot as plt
